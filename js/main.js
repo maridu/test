@@ -1,5 +1,7 @@
 // Стилизация выпадающих меню
-$('.card__select').selecter();
+$('.card__select').selecter( {
+  mobile: true
+});
 
 // Сворачивание мобильного меню при клике на ссылку
 var menuLinks = document.querySelectorAll('.navigation__link');
