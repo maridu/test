@@ -1,0 +1,66 @@
+
+/* Общие стили */
+
+@font-face {
+  font-family: "OpenSans";
+  src: url(../fonts/opensans-bold-webfont.woff) format('woff'),
+    url(../fonts/opensans-bold-webfont.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font: {
+    family: Arial, sans-serif;
+    size: $main-font-size;
+    weight: 400;
+  }
+}
+
+body {
+  @extend html;
+  background-color: $main-bg-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+.wrapper {
+  width: 96%;
+  max-width: 960px;
+  min-width: 320px;
+  margin: 86px auto 80px auto;
+  overflow: hidden;
+  
+  @media screen and (max-width: 920px) {
+    margin: 0 auto;
+  }
+  
+  @media screen and (max-width: 700px) {
+    position: relative;
+    width: 100%;
+  }
+}
+
+
+/* Конец общих стилей */

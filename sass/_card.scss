@@ -1,0 +1,353 @@
+/* Блок с данными банковской карты */
+
+.card {
+  position: relative;
+  padding-top: 15px;
+  
+  &__title {
+    margin-bottom: 20px;
+    font: {
+      family: "Open Sans", Arial, sans-serif;
+      size: 22px;
+      weight: 700;
+    }
+    line-height: 1;
+    color: #383d43;
+    letter-spacing: 1px;
+
+    @media screen and (max-width: 480px) {
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+  
+  &__side {
+    width: 350px;
+    padding: 20px 10px 10px 10px;
+    min-height: 236px;
+    border: 1px solid $card-color;
+    box-sizing: border-box;
+
+    background-color: $content-bg-color;
+    border-radius: 10px;
+
+    @media screen and (max-width: 480px) {
+      margin: 0 auto 20px auto;
+    }
+
+    @media screen and (max-width: 400px) {
+      max-width: 100%;
+    }
+  }
+  
+  &__front {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 36px;
+
+    @media screen and (max-width: 920px) {
+      margin-bottom: 190px;
+    }
+
+    @media screen and (max-width: 700px) {
+      margin-bottom: 37px;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin-bottom: 190px;
+    }
+
+    @media screen and (max-width: 480px) {
+      margin-bottom: 20px;
+    }
+  }
+  
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+    padding-top: 0;
+    font: {
+      family: Arial, sans-serif;
+      size: $main-font-size;
+      weight: 400;
+    }
+    line-height: 21px;
+    color: $payment-color;
+  }
+  
+  &__number {
+    padding: 0;
+    border: 0;
+    margin-bottom: 13px;
+  }
+  
+  &__expiration {
+    padding: 0;
+    border: 0;
+    margin-bottom: 55px;
+    
+    &-month {
+      width: 70px;
+    }
+    
+    &-year {
+      width: 85px;
+    }
+  }
+}
+
+.card__input {
+  padding: 10px;
+  min-height: 42px;
+  border: 1px solid $card-color;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: $input-text-color;
+  
+  &:focus {
+    border-color: $payment-color;
+    outline: none;
+  }
+  
+  &-number {
+    width: 65px;
+    padding: 5px;
+    margin-right: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: 360px) {
+      width: 55px;
+    }
+  }
+  
+  &-owner {
+    width: 97%;
+  }
+  
+  &-cvv {
+    position: relative;
+    width: 138px;
+    padding-right: 35px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+}
+
+
+.card__select {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin-right: 3px;
+  height: 42px;
+  border: 1px solid $card-color;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: $input-text-color; 
+  
+  &:focus {
+    border-color: $payment-color;
+    outline: none;
+  }
+}
+
+
+.card__back {
+  position: absolute;
+  top: 95px;
+  right: 15px;
+  
+  width: 370px;
+  padding-top: 80px;
+  padding-left: 215px;
+  box-sizing: border-box;
+  
+  @media screen and (max-width: 920px) {
+    top: 250px;
+
+  }
+  
+  @media screen and (max-width: 768px) {
+    right: 0;
+  }
+  
+  @media screen and (max-width: 700px) {
+    top: 95px;
+  }
+  
+    @media screen and (max-width: 600px) {
+    top: 250px;
+  }
+  
+  @media screen and (max-width: 480px) {
+    position: relative;
+    top: 0;
+    display: block;
+    width: 350px;
+    padding-left: 195px;
+    margin-bottom: 20px;
+  }
+  
+  @media screen and (max-width: 400px) {
+    padding-left: 50%;
+  }
+  
+  @media screen and (max-width: 380px) {
+    padding-left: 45%;
+  }
+  
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 350px;
+    height: 42px;
+    border: 1px solid #e3e9ed;
+    box-sizing: border-box;
+    background-color: $card-color;
+
+    @media screen and (max-width: 400px) {
+      width: 100%;
+    }
+  }
+}
+
+.card__button-help {
+  position: absolute;
+  top: 115px;
+  right: 25px;
+  
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  color: $card-color;
+  border: 1px solid $card-color;
+  border-radius: 50%;
+  
+  @media screen and (max-width: 400px) {
+    right: 14%;
+  }
+  
+  @media screen and (max-width: 355px) {
+    right: 12%;
+  }
+  
+  &:hover {
+    color: $payment-color;
+    border-color: $payment-color;
+  }
+  
+  &:focus {
+    color: $payment-color;
+    border-color: $payment-color;
+    outline: none;
+  }
+  
+  &:active {
+    color: $payment-color;
+    border-color: $payment-color;
+  }
+}
+
+.card__button-pay {
+  margin-left: -1px;
+  margin-bottom: 20px;
+  padding: 10px 50px;
+  width: 173px;
+  height: 40px;
+  border: 0;
+  box-sizing: border-box;
+  font: {
+    family: "Open Sans", Arial, sans-serif;
+    size: 14px;
+    weight: 700;
+  }
+  color: #fff;
+  
+  background-color: #95bf00;
+  background: linear-gradient(0deg, rgb(162, 197, 0) 0%, rgb(131, 178, 0) 100%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.02) inset;
+  
+  @media screen and (max-width: 480px) {
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+  
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  
+  &:focus {
+    opacity: 0.7;
+    outline: 2px solid #648000;
+  }
+  
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+
+.error {
+  border: 1px solid red;
+}
+
+/* Стили для кастомных выпадающих списков */
+.selecter {
+  position: absolute; /* для корректного отображения в IE */
+  top: 125px;
+}
+
+.selecter:nth-of-type(2) {
+  position: absolute;
+  left: 95px;
+}
+
+.selecter.closed,
+.selecter.focus.open {
+  display: inline-block;
+  margin-right: 4px;
+  margin-top: -40px;
+}
+
+.selecter.focus .selecter-selected {
+  border-color: $payment-color;
+}
+
+.selecter-selected {
+  font: {
+    family: Arial, sans-serif;
+    size: 16px;
+    weight: 400;
+  }
+  color: $input-text-color;
+  height: 42px;
+  border-radius: 0;
+  border: 1px solid $card-color;
+}
+
+.selecter-selected::after {
+  border: 0;
+  width: 16px;
+  height: 8px;
+  background: url(../img/arrow.png) no-repeat;
+  
+  @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      background: #fff url(../img/arrow@2x.png) no-repeat;
+      background-size: 16px 8px;
+    }
+}
+/* Конец стилей для кастомных выпадающих списков */
+
+/* Конец блока с данными банковской карты */

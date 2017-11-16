@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/jquery.fs.selecter.css">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <div class="wrapper"> <!--     общая обертка-->
+      
+      <header class="header">
+        <div class="top-wrapper">
+          <div class="header__logo">
+            <a href="https://chulakov.ru/" class="logo__link">
+            <picture>
+              <source srcset="img/logo.png, img/logo@2x.png 2x">
+              <img src="img/logo.png" alt="Студия Олега Чулакова" class="logo__img" width="176" height="36">
+            </picture>
+            </a>
+          </div>
+
+          <section class="header__content">
+            <h1 class="header__title">Заголовок страницы</h1>
+            <p class="header__desc">В отличие от пылевого и ионного хвостов, направление поступает в лимногляциальный часовой угол.</p>
+          </section>
+        </div> <!--      end top-wrapper-->
+      </header> <!--      end header-->
+
+
+      <main class="main">
+
+        <!--    Боковая панель и блок с реквизитами-->
+        <div class="main-wrapper">
+
+  <!--        Боковая панель с навигацией-->
+          <nav class="navigation">
+            <input type="checkbox" name="navigation__toggle" class="navigation__toggle" id="navigation__toggle">
+            <label for="navigation__toggle" class="navigation__label">
+              <span class="visually-hidden">Меню</span>
+            </label>
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Первая ссылка</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link current">Вторая ссылка (активная)</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Третья ссылка</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link user__link">Личный кабинет</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link user__link">Выйти</a>
+              </li>
+            </ul>
+          </nav> <!--окончание боковой панели с навигацией-->
+
+  <!--      Информация по оплате и данные карты-->
+          <div class="main-content-wrapper">
+            <div class="payment-card-wrapper">
+              <form action="#" class="card__form" method="post">
+
+    <!--                  Информация по оплате       -->
+                <section class="payment">
+                  <h2 class="payment__title">Информация по оплате:</h2>
+                  <div class="payment__table">
+                    <div class="payment__bill">
+                      <label for="bill__number" class="payment__label">Номер счета:</label>
+                      <input type="text" id="bill__number" class="payment__input" name="bill__number" value="87123658716587" disabled>
+                    </div>
+                    <div class="payment__sum">
+                      <label for="payment__sum" class="payment__label">Сумма платежа:</label>
+                      <input type="text" name="payment__sum" class="payment__input" id="payment__sum" value="100 руб." disabled>
+                    </div>
+                  </div> <!--end payment__table-->
+                </section> <!--    end payment section-->
+  <!--            конец информации по оплате-->
+
+  <!--            Информация о карте -->
+                <section class="card">
+                  <h2 class="card__title">Данные банковской карты</h2>
+
+    <!--           Лицевая сторона карты-->
+                  <section class="card__side card__front">
+                    <h3 class="visually-hidden">Лицевая сторона карты</h3>
+                    <fieldset class="card__number">
+                      <legend class="card__label" for="card__number1">Номер карты</legend>
+                      <input type="text" id="card__number1" class="card__input card__input-number" value="" maxlength="4" autocomplete="off">
+                      <input type="text" id="card__number2" class="card__input card__input-number" value="" maxlength="4" autocomplete="off">
+                      <input type="text" id="card__number3" class="card__input card__input-number" value="" maxlength="4" autocomplete="off">
+                      <input type="text" id="card__number4" class="card__input card__input-number" value="" maxlength="4" autocomplete="off">
+                    </fieldset> <!--end card__number-->
+
+                    <fieldset class="card__expiration">
+                      <legend class="card__label">Срок действия</legend>
+                      <select name="expiration-month" id="expiration-month" class="card__select card__expiration-month">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04" selected>04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+
+                      <select name="expiration-year" id="expiration-year" class="card__select card__expiration-year">
+                        <option value="2017">2017</option>
+                        <option value="2018" selected>2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                      </select>
+                    </fieldset> <!--    end card__expiration-->
+
+                    <input type="text" class="card__input card__input-owner" placeholder="Держатель карты" value="">
+                  </section> <!--end card__front section-->
+    <!--              конец лицевой стороны карты-->
+
+    <!--              Обратная сторона карты-->
+                  <section class="card__side card__back">
+                    <h3 class="visually-hidden">Обратная сторона карты</h3>
+                    <label for="cvv" class="card__label">Код CVV2 / CVC2</label>
+                    <input type="text" id="cvv" class="card__input card__input-cvv" maxlength="3" autocomplete="off" value="">
+                    <button class="card__button card__button-help">?</button>
+                  </section> <!--end card__back section-->
+    <!--              конец обратной стороны карты-->
+
+                  <button class="card__button card__button-pay" type="submit">Оплатить</button>
+                </section> <!--        end card section-->
+  <!--            конец информации о карте-->
+              </form>
+            </div> <!-- конец раздела с информацией по оплате и данными карты-->
+          
+            <section class="info">
+              <h2 class="visually-hidden">Дополнительная информация</h2>
+              <p class="info__details">Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.</p>
+              <p class="info__details">Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.</p>
+              <p class="info__details">Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.</p>
+              <p class="info__details">Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.</p>
+            </section> <!--          конец раздела с дополнительной информацией-->
+
+          </div> <!--          конец блока основного контента-->
+        </div> <!--        end main-wrapper-->
+  <!--      конец блока с боковой панелью и основным контентом-->
+
+      </main>
+
+      <footer class="footer">
+
+      </footer>
+    </div> <!--    end wrapper-->
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.fs.selecter.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

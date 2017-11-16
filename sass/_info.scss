@@ -1,0 +1,33 @@
+/* Блок с дополнительной информацией */
+
+.info {
+  padding: 15px 40px 18px 30px;
+  box-sizing: border-box;
+  width: 100%;
+  
+  
+  font: {
+    family: Arial, sans-serif;
+    size: 12px;
+    weight: 400;
+  }
+  
+  line-height: 1.5;
+  text-align: left;
+  
+  background-color: $input-text-color;
+  color: #7f8591;
+  
+  @media screen and (max-width: 700px) {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  
+  &__details {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Конец блока с дополнительной информацией */
